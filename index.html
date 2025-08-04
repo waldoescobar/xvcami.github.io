@@ -3,7 +3,11 @@
     window.scrollTo(0, 0);
   });
 </script>
-
+<head>
+<style>
+	a {text-decoration:none;}
+</style>
+</head>
 <!-- CONTENEDOR PRINCIPAL -->
 <div style="
   font-family: 'Brush Script MT', cursive;
@@ -18,6 +22,7 @@
   min-height: 100vh;
   width: 100%;
   box-sizing: border-box;
+  
 ">
 
   <!-- Contenedor interno para limitar ancho del contenido -->
@@ -35,24 +40,24 @@
 
     <h1 style="color: #5a8ecf; font-size: 4.5em; margin-bottom: 0;">Mis XV Años</h1>
     <h2 style="color: #8e44ad; font-family: 'Brush Script MT', cursive; font-size: 6em; margin-top: 5px;">Ana Camila</h2>
-    <p style="font-size: 3em; color: #444; font-family: 'Brush Script MT', cursive;">Con la bendición de mis padres, tengo el honor de invitarle a celebrar mis XV años. ¡Tu presencia hará este día aún más especial!</p>
+    <p style="font-size: 3em; color: #444; font-family: 'Brush Script MT', cursive;">Con la bendición de mis padres, tengo el honor de invitarle a celebrar mis XV años. ¡Su presencia hará este día aún más especial!</p>
 
     <!-- Datos del evento -->
     <p style="font-size: 3em; color: #333;">
       <strong>📅 Fecha:<br></strong> 8 de noviembre de 2025<br>
-      <strong>⛪ Misa:<br></strong>📍 <a href='https://maps.app.goo.gl/SbCzPCR2VjmfPMpM8'>Parroquia del Buen Pastor</a>🌏<br>
-      <strong>⏰ Hora:</strong> 3:00 PM<br>
-      <strong>🎉🎁 Recepción:<br></strong>📍 <a href='https://maps.app.goo.gl/xJfb3GUnexCh2VsG6'>Salón de Eventos STASE </a>🌏<br>
-      <strong>⏰ Hora:</strong> 4:00 PM
+      <strong>⛪ Misa:<br></strong> <a href='https://maps.app.goo.gl/MQzEmQYWka27t8o56'>🌏Parroquia Nuestra Señora de los Dolores</a><br>
+      <strong>⏰ Hora:</strong> 4:00 PM<br>
+      <strong>🎉🎁 Recepción:<br></strong><a href='https://maps.app.goo.gl/xJfb3GUnexCh2VsG6'>🌏Salón de Eventos STASE </a><br>
+      <strong>⏰ Hora:</strong> Al terminar la misa
     </p>
 
     <!-- Cuenta regresiva -->
     <h3 style="margin-top: 40px; color: #5a8ecf; font-size: 3.5em;">Faltan:</h3>
     <div id="countdown" style="display: flex; justify-content: center; gap: 15px; font-size: 3em; color: #34495e; margin-top: 10px;">
-      <div><span id="days">0</span><br>días</div>
-      <div><span id="hours">0</span><br>horas</div>
-      <div><span id="minutes">0</span><br>min</div>
-      <div><span id="seconds">0</span><br>seg</div>
+      <div><span id="days">0</span> días</div><br>
+      <div><span id="hours">0</span> : </div>
+      <div><span id="minutes">0</span> : </div>
+      <div><span id="seconds">0</span></div>
     </div>
 <style>
   .contenido-con-animacion.visible {
@@ -108,7 +113,7 @@
 </div>
 
 <script>
-  const countdownDate = new Date("November 8, 2025 15:00:00").getTime();
+  const countdownDate = new Date("November 8, 2025 16:00:00").getTime();
   const x = setInterval(function() {
     const now = new Date().getTime();
     const distance = countdownDate - now;
